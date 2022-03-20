@@ -1,6 +1,7 @@
 .logForm {
-    width: 40vw;
+    width: 450px;
 }
+
 
 .logContainer {
     width: 100vw;
@@ -8,4 +9,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and ( max-width : 720px) {
+    .logForm{
+        width: 80%;
+    }
 }

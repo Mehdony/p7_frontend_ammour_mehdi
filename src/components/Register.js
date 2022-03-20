@@ -21,7 +21,7 @@ function Register() {
   return (
     <div className="logContainer">
       <form className="logForm">
-        <h3>Sign Up</h3>
+        <h3>S'inscrir</h3>
 
         <div className="form-group">
           <label>Email address</label>

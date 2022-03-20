@@ -9,7 +9,7 @@ const Login = () => {
 
     <div className="logContainer">
       <form className="logForm">
-        <h3>Sign In</h3>
+        <h3>Se connecter</h3>
 
         <div className="form-group">
           <label>Email address</label>

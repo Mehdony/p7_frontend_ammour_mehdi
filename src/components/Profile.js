@@ -1,4 +1,7 @@
 import React from 'react'
+import '../cssComponents/Profile.css'
+
+
 
 function Profile() {
   return (

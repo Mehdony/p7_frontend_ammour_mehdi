@@ -1,0 +1,24 @@
+.InputForm {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.fileAndBtn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.textAreaForm {
+  width: 100%;
+}
+
+.btnFormContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+}

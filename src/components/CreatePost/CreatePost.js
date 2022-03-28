@@ -10,7 +10,7 @@ export default function CreatePost() {
   const userId = localStorage.getItem("userId");
   const username = localStorage.getItem("username");
   const token = localStorage.getItem("token");
-console.log(userId, username, token)
+  console.log(userId, username, token)
 
   const post = async (e) => {
     e.preventDefault();
@@ -29,7 +29,8 @@ console.log(userId, username, token)
     form.append("published", true);
     const response = await axios.post('http://localhost:8080/api/tutorials', form, config) 
     console.log(response)
-
+    setContent ("")
+    setSelectedFile("")
   };
 
   return (

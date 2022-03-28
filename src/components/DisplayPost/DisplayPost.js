@@ -3,10 +3,10 @@ import "./DisplayPost.css";
 import axios from "axios";
 
 export default function DisplayPost(props) {
-  // const [posts, setPosts] = useState([]);
+
   const token = localStorage.getItem("token");
   const posts = props.posts;
-  
+
   useEffect(() => {
     const config = {
       headers: {

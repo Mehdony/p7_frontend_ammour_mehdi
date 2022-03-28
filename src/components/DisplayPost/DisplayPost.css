@@ -1,0 +1,8 @@
+.post {
+    width: 600px;
+}
+
+.imgPost {
+    object-fit: cover;
+    width: 100%;
+}

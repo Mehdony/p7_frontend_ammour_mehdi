@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, {  useEffect } from "react";
 import "./DisplayPost.css";
 import axios from "axios";
 
-export default function DisplayPost() {
-  const [posts, setPosts] = useState([]);
+export default function DisplayPost(props) {
+  // const [posts, setPosts] = useState([]);
   const token = localStorage.getItem("token");
-
+  const posts = props.posts;
+  
   useEffect(() => {
     const config = {
       headers: {
@@ -14,17 +15,35 @@ export default function DisplayPost() {
     };
 
     const getPosts = async () => {
-      const response = await axios.get(
+
+      let response = await axios.get(
         "http://localhost:8080/api/tutorials/published",
         config
       );
-      setPosts(response.data);
+
+      
+
+      props.setPosts(response.data);
     };
 
     getPosts();
-    console.log(posts);
+    
   }, []);
-  
-  
-  return <div>DisplayPost</div>;
+
+  return (
+    <div className="display-post">
+      <h1>Display Post</h1>
+      <div className="post-container">
+        {[...posts].reverse().map((post) => (
+          <div className="post" key={post.id}>
+            <h2>{post.name}</h2>
+            <p>{post.description}</p>
+            <img className='imgPost'src={post.imageUrl} alt="post" />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
+
+

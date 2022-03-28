@@ -3,7 +3,7 @@ import "./CreatePost.css";
 import axios from "axios";
 
 
-export default function CreatePost() {
+export default function CreatePost(props) {
   const [content, setContent] = useState("");
   const [selectedFile, setSelectedFile] = useState("");
   console.log(selectedFile)
@@ -29,6 +29,7 @@ export default function CreatePost() {
     form.append("published", true);
     const response = await axios.post('http://localhost:8080/api/tutorials', form, config) 
     console.log(response)
+    props.setPosts([...props.posts, response.data])
     setContent ("")
     setSelectedFile("")
   };

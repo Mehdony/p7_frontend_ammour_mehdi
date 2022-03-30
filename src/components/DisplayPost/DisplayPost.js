@@ -27,7 +27,7 @@ export default function DisplayPost(props) {
 
   return (
     <div className="display-post">
-      <h1>Display Post</h1>
+      <h1>Derniers Posts</h1>
       <div className="post-container">
         {[...posts].reverse().map((post) => (
           <div className="post" key={post.id}>

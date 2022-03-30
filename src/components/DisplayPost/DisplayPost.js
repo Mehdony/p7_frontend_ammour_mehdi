@@ -1,9 +1,8 @@
-import React, {  useEffect } from "react";
+import React, { useEffect } from "react";
 import "./DisplayPost.css";
 import axios from "axios";
 
 export default function DisplayPost(props) {
-
   const token = localStorage.getItem("token");
   const posts = props.posts;
 
@@ -15,19 +14,15 @@ export default function DisplayPost(props) {
     };
 
     const getPosts = async () => {
-
       let response = await axios.get(
         "http://localhost:8080/api/tutorials/published",
         config
       );
 
-      
-
       props.setPosts(response.data);
     };
 
     getPosts();
-    
   }, []);
 
   return (
@@ -38,12 +33,10 @@ export default function DisplayPost(props) {
           <div className="post" key={post.id}>
             <h2>{post.name}</h2>
             <p>{post.description}</p>
-            <img className='imgPost'src={post.imageUrl} alt="post" />
+            <img className="imgPost" src={post.imageUrl} alt="post" />
           </div>
         ))}
       </div>
     </div>
   );
 }
-
-

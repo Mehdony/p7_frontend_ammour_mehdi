@@ -26,7 +26,7 @@ export default function DisplayPost(props) {
     };
 
     getPosts();
-  }, );
+  }, []);
 
   return (
     <div className="display-post">

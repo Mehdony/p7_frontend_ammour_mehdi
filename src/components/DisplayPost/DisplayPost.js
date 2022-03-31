@@ -1,10 +1,13 @@
 import React, { useEffect } from "react";
+import CreateComment from "../CreateComment/CreateComment";
+import DisplayComment from "../DisplayComment/DisplayComment";
 import "./DisplayPost.css";
 import axios from "axios";
 
 export default function DisplayPost(props) {
   const token = localStorage.getItem("token");
   const posts = props.posts;
+  const username = props.username;
 
   useEffect(() => {
     const config = {
@@ -23,7 +26,7 @@ export default function DisplayPost(props) {
     };
 
     getPosts();
-  }, []);
+  }, );
 
   return (
     <div className="display-post">
@@ -34,6 +37,18 @@ export default function DisplayPost(props) {
             <h2>{post.name}</h2>
             <p>{post.description}</p>
             <img className="imgPost" src={post.imageUrl} alt="post" />
+            <CreateComment
+              token={token}
+              username={username}
+              posts={posts}
+              setId={post.id}
+              setPost={props.setPosts}
+            />
+            {[...post.comments]?.reverse().map((com) => {
+              return (
+                <DisplayComment token={token} comData={com} postId={post.id} />
+              );
+            })}
           </div>
         ))}
       </div>

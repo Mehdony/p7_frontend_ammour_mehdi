@@ -8,13 +8,16 @@ function Home() {
 
   const [posts, setPosts] = useState([]);
   const username = localStorage.getItem("username"); 
+  
+  
 
   return (
+ 
     <>
       <CreatePost setPosts={setPosts} posts={posts}/>
       <DisplayPost username= {username} setPosts={setPosts} posts={posts} />
       
-    </>
+    </> 
   );
 }
 

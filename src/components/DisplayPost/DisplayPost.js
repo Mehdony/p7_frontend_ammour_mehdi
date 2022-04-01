@@ -26,6 +26,7 @@ export default function DisplayPost(props) {
     };
 
     getPosts();
+    
   }, []);
 
   return (

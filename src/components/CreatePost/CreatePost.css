@@ -1,9 +1,12 @@
 .InputForm {
-  padding: 30px;
+  padding: 20px 30px 40px 30px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  border: 1px solid black;
+  background-color: #093167;
+  /* border: 5px solid white; */
+  border-radius: 10px;
 }
 
 .fileAndBtn {
@@ -15,6 +18,7 @@
 
 .textAreaForm {
   width: 100%;
+ 
 }
 
 .btnFormContainer {
@@ -22,3 +26,13 @@
   justify-content: flex-end;
   width: 50%;
 }
+
+.form-control {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+

@@ -1,7 +1,9 @@
 import React , { useState } from "react";
-import "../cssComponents/Login.css";
 import axios from "axios";
 import {useNavigate} from 'react-router-dom'
+import bgImg from '../assets/images/bgImg.webp'
+import logoBig from '../assets/images/logoBig.svg'
+import "../cssComponents/Register.css";
 
 const Login = () => {
 
@@ -23,13 +25,18 @@ const Login = () => {
   
 
   return (
+<>
+    <div className="bg-container">
+      <img src={bgImg} className='bg-img' alt="bgImg" />
+   </div>
+    <img className='logoBig'src={logoBig }alt='logo groupomania'/> 
 
     <div className="logContainer">
       <form className="logForm">
-        <h3>Se connecter</h3>
+        <h3 className="log-font padding">Se connecter</h3>
 
         <div className="form-group">
-          <label>Email address</label>
+          <label className="log-font ">Email</label>
           <input
             type="email"
             className="form-control"
@@ -41,7 +48,7 @@ const Login = () => {
         </div>
 
         <div className="form-group">
-          <label>Password</label>
+          <label className="log-font ">Mot de passe</label>
           <input
             type="password"
             className="form-control"
@@ -59,18 +66,22 @@ const Login = () => {
               className="custom-control-input"
               id="customCheck1"
             />
-            <label className="custom-control-label" htmlFor="customCheck1">
-              Remember me
+            <label className="custom-control-label log-font " htmlFor="customCheck1">
+              Se souvenir de moi
             </label>
           </div>
         </div>
 
-        <button type="submit" className="btn btn-primary btn-block" onClick={login}>
+        <button type="submit" className="btn btn-primary btn-block padding" onClick={login}>
           
           Submit
         </button>
+        <p className="forgot-password text-right log-font">
+          Créer un compte ? <a  href="/register">S'inscrire</a>
+        </p>
       </form>
     </div>
+    </>
   );
 };
 

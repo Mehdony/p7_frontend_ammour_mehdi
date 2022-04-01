@@ -34,12 +34,14 @@ export default function CreatePost(props) {
     setSelectedFile("")
   };
 
+  
   return (
     <>
       <form className="InputForm" typeof="post">
         <div className="form-group purple-border textAreaForm">
           <label for="exampleFormControlTextarea4"></label>
           <textarea
+            placeholder= {`Quoi de neuf, ${username}?`}
             className="form-control"
             id="exampleFormControlTextarea4"
             rows="5"

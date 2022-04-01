@@ -30,9 +30,8 @@ export default function DisplayPost(props) {
   }, []);
 
   return (
-    <div className="display-post">
-      <h1>Derniers Posts</h1>
-      <div className="post-container">
+   
+      <div className="posts-container">
         {[...posts].reverse().map((post) => (
           <div className="post" key={post.id}>
             <h2>{post.name}</h2>
@@ -53,6 +52,6 @@ export default function DisplayPost(props) {
           </div>
         ))}
       </div>
-    </div>
+   
   );
 }

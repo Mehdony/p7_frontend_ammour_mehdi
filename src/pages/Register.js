@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "../cssComponents/Register.css";
 import axios from "axios";
 import {useNavigate} from 'react-router-dom'
+import bgImg from '../assets/images/bgImg.webp'
+import logoBig from '../assets/images/logoBig.svg'
 
 function Register() {
 
@@ -19,12 +21,17 @@ function Register() {
   }
 
   return (
+    <>
+    <div className="bg-container">
+      <img src={bgImg} className='bg-img' alt="bgImg" />
+   </div>
+    <img className='logoBig'src={logoBig }alt='logo groupomania'/>
     <div className="logContainer">
       <form className="logForm">
-        <h3>Inscription</h3>
+        <h3 className="log-font padding">Inscription</h3>
 
         <div className="form-group">
-          <label>Email address</label>
+          <label className="log-font font-log">Email</label>
           <input
             type="email"
             className="form-control"
@@ -36,11 +43,11 @@ function Register() {
         </div>
 
         <div className="form-group">
-          <label>username</label>
+          <label className="log-font font-log">Nom et prénom</label>
           <input
             type="text"
             className="form-control"
-            placeholder="saisissez votre nom et prénom"
+            placeholder="Saisissez votre nom et prénom"
             onChange={(e) => {
               setUsernameReg(e.target.value);
             }}
@@ -48,11 +55,11 @@ function Register() {
         </div>
 
         <div className="form-group">
-          <label>Password</label>
+          <label className="log-font font-log">Mot de passe</label>
           <input
             type="password"
             className="form-control"
-            placeholder="saisissez un mot de passe"
+            placeholder="Saisissez un mot de passe"
             onChange={(e) => {
               setPasswordReg(e.target.value);
             }}
@@ -62,15 +69,16 @@ function Register() {
         <button
           onClick={signup}
           type="submit"
-          className="btn btn-primary btn-block"
+          className="btn btn-primary btn-block padding"
         >
-          Sign Up
+          Créer un compte
         </button>
-        <p className="forgot-password text-right">
-          Already registered <a href="/login">sign in?</a>
+        <p className="forgot-password text-right log-font">
+          Deja un compte ? <a  href="/login">Se connecter</a>
         </p>
       </form>
     </div>
+  </>
   );
 }
 

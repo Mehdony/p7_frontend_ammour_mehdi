@@ -1,18 +1,67 @@
 .logForm {
     width: 450px;
+    /* border: 1px solid rgb(255, 255, 255); */
+    background: rgba(22, 22, 22, 0.85);
+    padding: 30px;
+    border-radius: 10px;
 }
 
 
 .logContainer {
-    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:flex-end;
+    /* margin-right:  30vw; */
+    width: 100vw;
+    padding-right: 250px;
+        flex-direction: column;
+        border-radius: 10px;
+        /* background-color: white; */
+
+}
+
+
+.bg-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1000;
+    left: 0;
+    overflow: hidden;
+}
+.bg-img {
+  
+    object-fit: cover;
+    
+}
+
+.padding {
+    margin-bottom: 30px !important;
+}
+
+.font-log {
+    font-size: 18px !important;
+}
+
+.logoBig {
+    position: absolute;
+    height: 150px;
+    top: 40%;
+    left: 6%;
+}
+
+.log-font {
+    color: white !important;
 }
 
 @media screen and ( max-width : 720px) {
     .logForm{
-        width: 80%;
+        width: 90vw;
+    }
+
+    .logContainer {
+        margin-right: 50%;
+       align-items: center;
     }
 }

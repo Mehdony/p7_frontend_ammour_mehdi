@@ -13,3 +13,13 @@ body {
     background-color: #faf3f3;
     z-index: -1000;
 } */
+
+
+.navBar {
+    width: 100vw;
+    height: 60px;
+    background-color: blue;
+    position: fixed;
+    top: 0;
+    left: 0;
+}

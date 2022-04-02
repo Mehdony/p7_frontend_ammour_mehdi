@@ -46,7 +46,7 @@ export default function DisplayPost(props) {
             />
             {[...post.comments]?.reverse().map((com) => {
               return (
-                <DisplayComment token={token} comData={com} postId={post.id} />
+                <DisplayComment token={token} comData={com} postId={post.id} username={username} setPost={props.setPosts}/>
               );
             })}
           </div>

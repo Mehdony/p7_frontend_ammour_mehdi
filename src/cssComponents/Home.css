@@ -3,3 +3,13 @@ body {
     justify-content: center;
     background-color: #faf3f3;
 }
+/* 
+.static-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #faf3f3;
+    z-index: -1000;
+} */

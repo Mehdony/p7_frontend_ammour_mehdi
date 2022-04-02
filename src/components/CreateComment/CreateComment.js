@@ -4,7 +4,7 @@ import axios from 'axios';
 const CreateComment = (props) => {
 
     const [content, setContent] = useState('')
-
+    const token = localStorage.getItem('token')
     const handleSend = async (e) => {
         e.preventDefault()
 
@@ -15,7 +15,7 @@ const CreateComment = (props) => {
 
         const config = {
             headers: {
-                'Authorization': `Bearer ${props.token}`
+                'Authorization': `Bearer ${token}`
             }
         }
 
@@ -59,3 +59,4 @@ const CreateComment = (props) => {
 
 
 export default CreateComment;
+

@@ -43,7 +43,7 @@ const Showcomments = (props) => {
                         <p className='comment-content'>{comData.text}</p>
                     </div>
                     <div className='comment-button-container'>
-                       { username === comData.name ? <button className='comment-button' onClick={handleDeleteComment} aria-label="Left Align">!</button> : null }
+                       { username === comData.name ? <button className='comment-button' onClick={handleDeleteComment} aria-label="Left Align">Supprimer</button> : null }
 
                     </div>
 

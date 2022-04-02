@@ -5,10 +5,11 @@ import bgImg from '../assets/images/bgImg.webp'
 import logoBig from '../assets/images/logoBig.svg'
 import "../cssComponents/Register.css";
 
-const Login = () => {
+const Login = (props) => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
 
   let navigate = useNavigate()
 
@@ -16,10 +17,10 @@ const Login = () => {
     e.preventDefault()
     const response = await axios.post('http://localhost:8080/api/auth/login',{email , password} )
     console.log(response)
-    navigate('/')
     localStorage.setItem('userId', response.data.userId)
     localStorage.setItem('username', response.data.username)
     localStorage.setItem('token', response.data.token)
+    navigate('/')
   }
 
   

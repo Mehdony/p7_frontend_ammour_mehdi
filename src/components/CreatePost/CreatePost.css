@@ -1,5 +1,5 @@
 .InputForm {
-  padding: 20px 30px 40px 30px;
+  padding: 10px 30px 20px 30px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -14,7 +14,10 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
+    column-gap: 20px;
     width: 100%;
+
 }
 
 .textAreaForm {
@@ -25,7 +28,7 @@
 .btnFormContainer {
   display: flex;
   justify-content: flex-end;
-  width: 50%;
+  
 }
 
 .form-control {
@@ -33,7 +36,42 @@
 }
 
 .form-group {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 
+input[type="file"] {
+  display: none;
+}
+
+.form-label-custom{
+  width: 70px;
+ height: 38px;
+  background-color: #ec2672;
+  margin: 0;
+border-radius: 5px;
+   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upText {
+  height: 100%;
+  text-align: center;
+  line-height: 100%;
+  margin: 0;
+}
+
+
+.label-custom {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upIcon {
+  height: 20px;
+}

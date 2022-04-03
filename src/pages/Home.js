@@ -4,36 +4,41 @@ import CreatePost from "../components/CreatePost/CreatePost";
 import DisplayPost from "../components/DisplayPost/DisplayPost";
 import { useNavigate } from "react-router-dom";
 import { Navigate } from "react-router-dom";
+import logoBig from '../assets/images/logoBig.svg'
 
 function Home() {
-
-  const [posts, setPosts] = useState([])
-  const username = localStorage.getItem("username")
-  const token = localStorage.getItem("token")
+  const [posts, setPosts] = useState([]);
+  const username = localStorage.getItem("username");
+  const token = localStorage.getItem("token");
 
   const navigate = useNavigate();
 
   const handleLogout = (e) => {
-    e.preventDefault()
-    localStorage.removeItem("token")
-    localStorage.removeItem("username")
-    localStorage.removeItem("userId")
-    navigate("/login")
-  }
+    e.preventDefault();
+    localStorage.removeItem("token");
+    localStorage.removeItem("username");
+    localStorage.removeItem("userId");
+    navigate("/login");
+  };
 
-  return (
-
-      token ? 
-
-    (
-      <>
+  return token ? (
+    <>
       <div className="navBar">
-      <button className="logout-button" onClick={handleLogout}>
-        logout
-      </button>
-      <button className="profil-button" onClick={handleLogout}>
-        profil
-      </button>
+        <img className="logo-small" src={logoBig}alt= "Logo small"/>
+        <div className="navBar-right">
+          <button
+            className="logout-button btn btn-primary"
+            onClick={handleLogout}
+          >
+            Deconnexion
+          </button>
+          <button
+            className="profil-button btn btn-primary"
+            onClick={handleLogout}
+          >
+            Profil
+          </button>
+        </div>
       </div>
       <CreatePost setPosts={setPosts} posts={posts} />
       <DisplayPost
@@ -42,9 +47,9 @@ function Home() {
         posts={posts}
         token={token}
       />
-    </> ) : (
-            <Navigate to="/login" replace={true} />
-        )
+    </>
+  ) : (
+    <Navigate to="/login" replace={true} />
   );
 }
 

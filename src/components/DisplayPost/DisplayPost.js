@@ -33,11 +33,12 @@ export default function DisplayPost(props) {
       {[...posts].reverse().map((post) => (
         <div className="post" key={post.id}>
           <h2>{post.name}</h2>
+          { username === post.name  ? 
           <DeletePostButton
             postId={post.id}
             setPost={props.setPosts}
             posts={posts}
-          />
+          /> : null}
           <p>{post.description}</p>
           <img className="imgPost" src={post.imageUrl} alt="post" />
           <CreateComment

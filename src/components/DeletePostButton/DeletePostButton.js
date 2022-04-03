@@ -30,6 +30,6 @@ export default function DeletePostButton(props) {
     
       }
   return (
-    <bouton onClick={handleDeletePost} className="btn btn-primary bouton" >Hello</bouton>
+    <bouton onClick={handleDeletePost} className="btn btn-primary bouton" >Supprimer post</bouton>
   )
 }

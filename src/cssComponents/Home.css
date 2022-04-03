@@ -2,7 +2,13 @@ body {
     display: flex;
     justify-content: center;
     background-color: #faf3f3;
+    
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+    display: none;
+  }
 /* 
 .static-right {
     position: absolute;
@@ -17,9 +23,28 @@ body {
 
 .navBar {
     width: 100vw;
-    height: 60px;
-    background-color: blue;
+    height: 85px;
+    background-color: #093167;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
+}
+.navBar-right{
+    display: flex;
+    align-items: center;
+    width: 265px;
+   margin-right: 30px;
+   justify-content: space-around;
+}
+
+.profil-button {
+    width: 120px !important;
+}
+
+.logo-small{
+    height: 40px;
+    margin-left: 35px;
 }

@@ -48,3 +48,19 @@ body {
     height: 40px;
     margin-left: 35px;
 }
+
+.static-left, .static-right{
+    width: 27%;
+    height: 100vh;
+    position: fixed;
+    z-index: -60000;
+    background-color: rgb(32, 32, 32);
+    top: 0;
+} 
+
+.static-left {
+    left: 0;
+}
+.static-right  {
+    right: 0;
+}

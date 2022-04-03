@@ -23,6 +23,9 @@ function Home() {
 
   return token ? (
     <>
+    
+    <div className="static-left">
+    </div>
       <div className="navBar">
         <img className="logo-small" src={logoBig}alt= "Logo small"/>
         <div className="navBar-right">
@@ -47,6 +50,9 @@ function Home() {
         posts={posts}
         token={token}
       />
+
+<div className="static-right">
+    </div>
     </>
   ) : (
     <Navigate to="/login" replace={true} />

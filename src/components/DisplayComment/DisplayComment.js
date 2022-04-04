@@ -5,10 +5,10 @@ import "./DisplayComment.css";
 
 const Showcomments = (props) => {
     const comData = props.comData
-    const userId = props.userId
+    // const userId = props.userId
     const username = props.username
     const token = localStorage.getItem("token")
-
+    const isAdmin = (localStorage.getItem('isAdmin') === 'true')
     const handleDeleteComment = async (e) => {
     
         e.preventDefault()
@@ -43,7 +43,7 @@ const Showcomments = (props) => {
                         <p className='comment-content'>{comData.text}</p>
                     </div>
                     <div className='comment-button-container'>
-                       { username === comData.name ? <button className='comment-button' onClick={handleDeleteComment} aria-label="Left Align">Supprimer</button> : null }
+                       { username === comData.name || isAdmin ? <button className='comment-button' onClick={handleDeleteComment} aria-label="Left Align">Supprimer</button> : null }
 
                     </div>
 

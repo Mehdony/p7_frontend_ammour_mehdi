@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "../cssComponents/Home.css";
+import DeleteAccount from "../components/DeleteAccount/DeleteAccount";
 import CreatePost from "../components/CreatePost/CreatePost";
 import DisplayPost from "../components/DisplayPost/DisplayPost";
 import { useNavigate } from "react-router-dom";
 import { Navigate } from "react-router-dom";
-import logoBig from '../assets/images/logoBig.svg'
+import logoBig from "../assets/images/logoBig.svg";
 
 function Home() {
   const [posts, setPosts] = useState([]);
@@ -24,11 +25,9 @@ function Home() {
 
   return token ? (
     <>
-    
-    <div className="static-left">
-    </div>
+      <div className="static-left"></div>
       <div className="navBar">
-        <img className="logo-small" src={logoBig}alt= "Logo small"/>
+        <img className="logo-small" src={logoBig} alt="Logo small" />
         <div className="navBar-right">
           <button
             className="logout-button btn btn-primary"
@@ -36,12 +35,8 @@ function Home() {
           >
             Deconnexion
           </button>
-          <button
-            className="profil-button btn btn-primary"
-            onClick={handleLogout}
-          >
-            Profil
-          </button>
+
+          <DeleteAccount />
         </div>
       </div>
       <CreatePost setPosts={setPosts} posts={posts} />
@@ -52,8 +47,7 @@ function Home() {
         token={token}
       />
 
-<div className="static-right">
-    </div>
+      <div className="static-right"></div>
     </>
   ) : (
     <Navigate to="/login" replace={true} />

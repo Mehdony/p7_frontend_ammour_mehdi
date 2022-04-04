@@ -41,7 +41,9 @@ export default function DisplayPost(props) {
             posts={posts}
           /> : null}
           <p>{post.description}</p>
+          {post.imageUrl ? 
           <img className="imgPost" src={post.imageUrl} alt="post" />
+         : null}
           <CreateComment
             token={token}
             username={username}

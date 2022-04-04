@@ -28,6 +28,9 @@ function Home() {
       <div className="static-left"></div>
       <div className="navBar">
         <img className="logo-small" src={logoBig} alt="Logo small" />
+        <div className="navBar-Center">
+          <h1 className="navBar-center-text" >Bonjour, {username} !</h1>
+        </div>
         <div className="navBar-right">
           <button
             className="logout-button btn btn-primary"

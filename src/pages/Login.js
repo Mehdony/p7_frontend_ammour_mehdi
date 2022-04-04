@@ -20,6 +20,7 @@ const Login = (props) => {
     localStorage.setItem('userId', response.data.userId)
     localStorage.setItem('username', response.data.username)
     localStorage.setItem('token', response.data.token)
+    localStorage.setItem('isAdmin', response.data.isAdmin)
     navigate('/')
   }
 

@@ -18,6 +18,7 @@ function Home() {
     localStorage.removeItem("token");
     localStorage.removeItem("username");
     localStorage.removeItem("userId");
+    localStorage.removeItem("isAdmin");
     navigate("/login");
   };
 

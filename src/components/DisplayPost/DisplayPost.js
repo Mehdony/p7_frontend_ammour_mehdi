@@ -9,7 +9,7 @@ export default function DisplayPost(props) {
   const token = localStorage.getItem("token");
   const posts = props.posts;
   const username = props.username;
-
+  
   useEffect(() => {
     const config = {
       headers: {
@@ -33,7 +33,7 @@ export default function DisplayPost(props) {
       {[...posts].reverse().map((post) => (
         <div className="post" key={post.id}>
           <h2>{post.name}</h2>
-          { username === post.name  ? 
+          { username === post.name   ? 
           <DeletePostButton
             postId={post.id}
             setPost={props.setPosts}

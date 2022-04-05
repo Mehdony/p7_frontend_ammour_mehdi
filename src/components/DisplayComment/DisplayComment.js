@@ -39,7 +39,7 @@ const Showcomments = (props) => {
             return (
                 <div className='comment' key={comData.key}>
                     <div className='comment-id-container'>
-                        <h3 className='comment-id'>{comData.name}</h3>
+                        <h3 className='comment-id'>{comData.name.split(' ')[0]}</h3>
                         <p className='comment-content'>{comData.text}</p>
                     </div>
                     <div className='comment-button-container'>

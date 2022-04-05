@@ -73,3 +73,58 @@ body {
     font-weight: bold;
     margin-left: 70px;
 }
+
+
+@media screen and ( max-width : 720px) {
+    .navBar-right {
+        display: flex;
+        width: 100%;
+       justify-content: center;
+        align-items: center;      
+        margin:  2vw 0 0 0;
+        
+    }
+    .navBar-center-text {
+        margin-left: 0;
+    }
+    .navBar {
+        height: 130px;
+        flex-wrap: wrap-reverse;
+        width: 100%;
+    }
+    .navBar-center-text {
+        font-size: 30px;
+        font-weight: 300;
+        margin-left: 0;
+    }
+    .profil-button {
+        width: 200px !important;
+        margin-left: 20px;
+    }
+    .logo-small{
+        /* height: 30px; */
+        margin-left: 5vw;
+        height: 30px;
+    }
+    .static-left, .static-right{
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        z-index: -60000;
+        background-color: inherit;
+        display: none;
+        top: 0;
+    } 
+    .static-left {
+        left: 0;
+    }
+    .static-right  {
+        right: 0;
+    }
+
+    .navBar-Center{
+        width: 50%;
+      
+       
+    }
+}

@@ -30,6 +30,71 @@
 
 h2{
     font-size: 30px;
-    color: black;
+    color: #181717;
+
+}
+
+
+.post-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.post-desc {
+    font-size: 20px;
+    font-family: 'Segoe UI',sans-serif !important;
+    font-weight: 500;
+    color: rgb(32, 32, 32);
+}
+
+.comment-post {
+  width: 100%;
+  border-radius: 5px !important;
+  padding: 10px;
+}
+
+@media screen and ( max-width : 720px) { 
+
+    body {background-color: #093167;}
+
+    .posts-container {
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #093167;
+        border-radius: 10px;
+        margin-top: 40px;
+        row-gap: 30px;
+    }
+    .post {
+        width: 90vw;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        background-color: white;
+        margin-bottom: 30px;
+    }
+    .imgPost {
+        object-fit: cover;
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 1em;
+    }
+    h2{
+        font-size: 30px;
+        color: black;
+    }
+    .post-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
 
 }

@@ -56,12 +56,23 @@
 }
 
 @media screen and ( max-width : 720px) {
+    
+    .logoBig {
+        position: absolute;
+        height: 55px;
+        top: 5%;
+        left: 13%;
+    }
+    
     .logForm{
         width: 90vw;
+        
     }
 
     .logContainer {
-        margin-right: 50%;
        align-items: center;
+       justify-content: center;
+       padding: 0;
     }
 }
+

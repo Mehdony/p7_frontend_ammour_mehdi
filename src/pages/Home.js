@@ -29,7 +29,7 @@ function Home() {
       <div className="navBar">
         <img className="logo-small" src={logoBig} alt="Logo small" />
         <div className="navBar-Center">
-          <h1 className="navBar-center-text" >Bonjour, {username} !</h1>
+          <h1 className="navBar-center-text" >Bonjour, {username.split(' ')[0]} !</h1>
         </div>
         <div className="navBar-right">
           <button

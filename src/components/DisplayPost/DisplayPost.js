@@ -33,6 +33,7 @@ export default function DisplayPost(props) {
     <div className="posts-container">
       {[...posts].reverse().map((post) => (
         <div className="post" key={post.id}>
+          <div className="post-header">
           <h2>{post.name}</h2>
           { username === post.name || isAdmin  ? 
           <DeletePostButton
@@ -40,7 +41,8 @@ export default function DisplayPost(props) {
             setPost={props.setPosts}
             posts={posts}
           /> : null}
-          <p>{post.description}</p>
+          </div>
+          <p className="post-desc">{post.description}</p>
           {post.imageUrl ? 
           <img className="imgPost" src={post.imageUrl} alt="post" />
          : null}

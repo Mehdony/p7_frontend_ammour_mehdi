@@ -27,7 +27,6 @@ export default function DeletePostButton(props) {
           return posts
         })
     
-    
       }
   return (
     <bouton onClick={handleDeletePost} className="btn btn-primary bouton" >Supprimer post</bouton>

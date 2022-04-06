@@ -49,11 +49,11 @@ function Register() {
           </div>
 
           <div className="form-group">
-            <label className="log-font font-log">Nom et prénom</label>
+            <label className="log-font font-log">Prénom et nom</label>
             <input
               type="text"
               className="form-control"
-              placeholder="Saisissez votre nom et prénom"
+              placeholder="Saisissez votre prénom et nom"
               onChange={(e) => {
                 setUsernameReg(e.target.value);
               }}

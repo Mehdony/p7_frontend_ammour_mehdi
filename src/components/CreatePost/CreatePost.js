@@ -6,7 +6,6 @@ import axios from "axios";
 export default function CreatePost(props) {
   const [content, setContent] = useState("");
   const [selectedFile, setSelectedFile] = useState("");
-  console.log(selectedFile);
   const userId = localStorage.getItem("userId");
   const username = localStorage.getItem("username");
   const token = localStorage.getItem("token");
@@ -34,6 +33,7 @@ export default function CreatePost(props) {
     );
     console.log(response);
     props.setPosts([...props.posts, response.data]);
+    //permet de réinitialiser le state du form
     setContent("");
     setSelectedFile("");
   };

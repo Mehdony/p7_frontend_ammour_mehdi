@@ -11,6 +11,8 @@ export default function DisplayPost(props) {
   const posts = props.posts;
   const username = props.username;
   const isAdmin = (localStorage.getItem('isAdmin') === 'true')
+
+
   useEffect(() => {
     const config = {
       headers: {

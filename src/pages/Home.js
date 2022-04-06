@@ -8,10 +8,11 @@ import { Navigate } from "react-router-dom";
 import logoBig from "../assets/images/logoBig.svg";
 
 function Home() {
+  
   const [posts, setPosts] = useState([]);
   const username = localStorage.getItem("username");
   const token = localStorage.getItem("token");
-
+  
   const navigate = useNavigate();
 
   const handleLogout = (e) => {
@@ -22,7 +23,7 @@ function Home() {
     localStorage.removeItem("isAdmin");
     navigate("/login");
   };
-
+  
   return token ? (
     <>
       <div className="static-left"></div>
